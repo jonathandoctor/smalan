@@ -1,0 +1,23 @@
+#AuthUserFile /home/smalan/.htpasswd
+#AuthName "smalan"
+#AuthType Basic 
+#<Limit GET POST>
+#require valid-user
+#</Limit>
+<ifmodule mod_expires.c>
+  <filesmatch "\.(jpg|gif|png|css|js)$">
+     ExpiresActive on
+     ExpiresDefault "access plus 2 weeks"
+  </filesmatch>
+</ifmodule>
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(static/.*)$ - [L]
+RewriteRule ^sitemap\.xml /media/sitemap.xml [L]
+RewriteRule ^robots\.txt /media/robots.txt [L]
+RewriteCond %{REQUEST_URI} ^/stats/(.*)$ [OR]
+RewriteCond %{REQUEST_URI} ^/failed_auth.html$
+RewriteRule ^.*$ - [L] 
+RewriteRule ^(dispatch\.fcgi/.*)$ - [L]
+RewriteRule ^(.*)$ dispatch.fcgi/$1 [L]	    
