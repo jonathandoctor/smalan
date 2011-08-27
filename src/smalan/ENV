@@ -3,7 +3,7 @@
 echo "Setting env..."
 
 # Set the python path
-ENV_DIR=$(cd `dirname $0` && pwd)
+ENV_DIR=$(cd `dirname -- $0` && pwd)
 export PYTHONPATH=`dirname $ENV_DIR`
 
 export DJANGO_SETTINGS_MODULE='smalan.settings'
