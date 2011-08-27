@@ -4,6 +4,96 @@
 
 {% block content %}
 
-<h1>Wheeee!</h1>
+{% include '_head.html' %}
+
+<div id="scrolling-content">
+  <div class="wrapper">
+    <div class="info-box" id="why">
+      <h3>Skilmálar</h3>
+      <div class="description">
+        Hér má nálgast skilmála fyrir þjónustuna
+      </div>
+      <div class="clearfix"></div>
+      <br /><br /><br />
+      <div id="why1">
+        <div class="watercolor" id="watercolor-doc"></div>
+        <table id="why1-table">
+          <tr>
+            <td><div class="icon1"></div></td>
+            <td>
+              <div id="why1-copy" class="copy">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula pharetra urna, laoreet vulputate arcu consectetur sed. </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="clearfix"></div>
+      </div>
+    </div> <!-- end #why -->
+    <div class="clearfix"></div>
+    <br /><br />
+    <div class="info-box" id="how">
+      <h3>Þjónustan</h3>
+      <div class="description">
+        <p>Hvernig virkar þjónustan</p></div>
+      <div class="clearfix"></div>
+      <br /><br /><br />
+      <div id="how1">
+        <div class="watercolor" id="watercolor-xray"></div>
+        <table id="how1-table">
+          <tr>
+            <td><div class="icon1"></div></td>
+            <td>
+              <div id="how1-copy" class="copy">
+                <p><b>Nýskráning</b></p>
+                <p>Til að nýskrá...</p>
+                <p><b>Skilmálar</b></p>
+                <p>Til að geta fengið lán þarf að samþykkja skilmála</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="clearfix"></div>
+      </div>
+      <div id="how2">
+        <div class="watercolor" id="watercolor-phone"></div>
+        <table id="how2-table">
+          <tr>
+            <td><div class="icon2"></div></td>
+            <td>
+              <div id="how2-copy" class="copy">
+                <p><b>Hvernig fæ ég lán?</b></p>
+                <p>SMS eða inni á smalan.is</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="clearfix"></div>
+      </div>
+    </div> <!-- end #how -->
+    <div class="clearfix"></div>
+    <div class="info-box" id="who">
+      <h3>Um okkur</h3>
+      <div class="description">
+        <p>Hverjir eru á bak við síðuna?</p>
+      </div>
+      <div class="clearfix"></div>
+      <div id="people">
+              <div>
+                  <div>
+                      <div class="info">
+		                <h4>Jón Jónsson</h4>
+		                <h5>Framkvæmdastjóri</h5>
+		                
+                      </div>
+                  </div>
+              </div>
+      </div>
+    </div> <!-- end #who -->
+    <div class="clearfix"></div>
+  </div> <!-- end .wrapper -->
+
+  {% include '_footer.html' %}
+</div> <!-- end #scrolling-content -->
 
 {% endblock content %}
