@@ -6,10 +6,10 @@ from smalan.util import add_response
 
 @add_response
 def main(request, response):
-    render_to_response('main.html')
+    return render_to_response('main.html', response)
 
 
 @add_response
 def test(request, response):
     response['asdf'] = 3
-    render_to_response('test.html')
+    return render_to_response('test.html', response)
