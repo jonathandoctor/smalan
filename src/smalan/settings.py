@@ -107,6 +107,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'smalan.main.middleware.AdminLockMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -161,3 +162,5 @@ LOGGING = {
         },
     }
 }
+
+ADMIN_IPS = ('212.30.222.65','89.160.152.67','212.30.192.219')
